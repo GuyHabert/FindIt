@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.github.vipulasri.timelineview.TimelineView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            app:startLineColor="@color/white"
+            app:lineOrientation="vertical"
+            app:lineStyle="normal"
+            app:markerInCenter="false"
+            android:id="@+id/timeline"
+            app:lineWidth="1dp"
+            app:linePadding="5dp"
+            android:paddingLeft="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sd lkf ldsk fjbas daskjd as kdsfkj dsdfds fkj dskj fkjds fkj dskjf kjdsfkjdbskfjdskjfkdsnfkskdjfnkj dkasbdoi"
+            android:layout_toRightOf="@+id/timeline"
+            android:textAlignment="viewStart"
+            android:layout_gravity="top"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal"
+            tools:ignore="RtlCompat"
+            android:textSize="12dp"
+            android:id="@+id/txt_addr"/>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

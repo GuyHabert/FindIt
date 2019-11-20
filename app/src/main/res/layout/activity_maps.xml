@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Places Road"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+        <com.adroitandroid.chipcloud.ChipCloud
+            android:id="@+id/chip_cloud"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            map:deselectedColor="@color/grey"
+            map:deselectedFontColor="@color/black"
+            map:selectedColor="@color/colorPrimary"
+            map:selectedFontColor="@color/white"
+            map:deselectTransitionMS="500"
+            map:selectTransitionMS="750"
+            map:selectMode="required"
+            map:gravity="staggered"
+            map:minHorizontalSpacing="32dp"
+            map:verticalSpacing="15dp"
+            map:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                map:strokeWidth="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                map:cornerRadius="20dp"
+                android:layout_marginHorizontal="10dp"
+                map:strokeColor="@color/colorPrimary"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_direction"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Directions"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                map:cornerRadius="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:drawablePadding="5dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"/>
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/map"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
